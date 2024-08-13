@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track cash analysis</title>
+    <style>
+        body{
+            background:  #441f5e74 !important;
+            height: 100vh;
+            
+        }
+        canvas{
+         
+            position: relative;
+            top: 2em;
+            border: 2px solid green;  
+                                                     
+        }
+        .container{
+            display: flex;
+            text-align: center;            
+            flex-direction: column;
+            
+        } 
+        .heading{
+            background:#2a3153;
+            color: white;
+        }      
+        .explanation {
+        color: white;
+        font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+         <h4>Ba hustler this is an Analysis of your expenses
+         </h4> 
+        </div>
+  <canvas id="myChart"></canvas>            
+         </div>
+   <br><br>
+        <div class="explanation">
+     <details>
+            <summary>
+               Verbose analysis 
+           </summary>
+            <p id="wordSpill">
+                
+            </p>
+           </details> 
+                 </div>
+                     </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+<script src="analysis.js">
+   
+    
+    
+    
+</script>
+</html>
