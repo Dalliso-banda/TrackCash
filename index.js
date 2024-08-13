@@ -45,7 +45,7 @@ class formHandler{
           this.getdata= this.store.getAll();
           this.getdata.onsuccess=event=>{
               this.result= event.target.result;
-             alert(JSON.stringify(this.result)) 
+              
           }
               this.addingInfo=              this.store.add(this.userData);
               this.addingInfo.onerror=error=>{
