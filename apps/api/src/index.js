@@ -18,7 +18,13 @@ app.set('trust proxy', 1);
 // ─── Security ────────────────────────────────────────────────────────────────
 app.use(helmet());
 app.use(cors({
-  origin: env.NODE_ENV === 'production' ? process.env.ALLOWED_ORIGIN : '*',
+  origin: [
+    'http://localhost:5173',
+    'https://artasylum.xyz',
+    'http://artasylum.xyz',
+    'capacitor://localhost',
+    'http://localhost',
+  ],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
