@@ -1,0 +1,22 @@
+{
+  "name": "@trackcash/mobile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cap:sync": "cap sync",
+    "cap:build:android": "cap build android",
+    "cap:open:android": "cap open android"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.29.3",
+  "dependencies": {
+    "@capacitor/android": "^8.4.0",
+    "@capacitor/core": "^8.4.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.4.0"
+  }
+}

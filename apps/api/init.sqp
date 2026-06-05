@@ -1,0 +1,14 @@
+-- ─── Run this once as MySQL root ─────────────────────────────────────────────
+-- mysql -u root -p < init.sql
+
+CREATE DATABASE IF NOT EXISTS trackcash
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+CREATE USER IF NOT EXISTS 'trackcash_user'@'localhost' IDENTIFIED BY 'trackcash_pass';
+
+GRANT ALL PRIVILEGES ON trackcash.* TO 'trackcash_user'@'localhost';
+
+FLUSH PRIVILEGES;
+
+SELECT 'TrackCash database and user created successfully.' AS status;

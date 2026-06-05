@@ -1,0 +1,5 @@
+{
+  "appId": "com.trackcash.app",
+  "appName": "TrackCash",
+  "webDir": "../web/dist"
+}
