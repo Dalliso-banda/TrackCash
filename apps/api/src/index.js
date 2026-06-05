@@ -14,7 +14,7 @@ const logger = require('./utils/logger');
 require('./config/db');
 
 const app = express();
-
+app.set('trust proxy', 1);
 // ─── Security ────────────────────────────────────────────────────────────────
 app.use(helmet());
 app.use(cors({
