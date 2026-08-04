@@ -12,10 +12,12 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
 import BottomNav from '../components/BottomNav';
 import { useAuth } from '../context/AuthContext';
 import { useThemeMode } from '../context/ThemeModeContext';
 import client from '../api/client';
+import { useNavigate } from 'react-router-dom';
 
 const getInitials = (name = '') =>
   name.split(' ').map((n) => n[0]).join('').toUpperCase().slice(0, 2);
@@ -25,6 +27,7 @@ const CURRENCIES = ['ZMW', 'USD', 'ZAR', 'KES'];
 export default function ProfileView() {
   const { logout } = useAuth();
   const { mode, toggleThemeMode } = useThemeMode();
+  const navigate = useNavigate();
 
   const [user, setUser]         = useState(null);
   const [loading, setLoading]   = useState(true);
@@ -207,6 +210,13 @@ export default function ProfileView() {
                 <Typography variant="body2" sx={{ color: '#b0a99f', mr: 1 }}>
                   {loading ? '...' : user?.monthly_income_goal ? `K ${Number(user.monthly_income_goal).toLocaleString()}` : 'Not set'}
                 </Typography>
+                <ChevronRightIcon sx={{ color: '#c0c0c0', fontSize: '1.2rem' }} />
+              </ListItemButton>
+              <Divider sx={{ borderColor: '#fbf7f4' }} />
+
+              <ListItemButton sx={{ py: 1.8 }} onClick={() => navigate('/budgeting')}>
+                <ListItemIcon sx={{ minWidth: 40 }}><AccountBalanceWalletOutlinedIcon sx={{ color: '#757575' }} /></ListItemIcon>
+                <ListItemText primary="Budgeting" slotProps={{ primary: { variant: 'body2', fontWeight: 500 } }} />
                 <ChevronRightIcon sx={{ color: '#c0c0c0', fontSize: '1.2rem' }} />
               </ListItemButton>
 

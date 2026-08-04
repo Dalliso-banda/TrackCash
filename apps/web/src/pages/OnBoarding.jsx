@@ -100,7 +100,7 @@ export default function Onboarding() {
       <Box sx={{ p: 3, pb: 4, textAlign: 'center' }}>
         <Button
           fullWidth variant="contained" disableElevation
-          onClick={() => navigate('/register')}
+          onClick={() => navigate('/signup')}
           sx={{
             borderRadius: '20px', py: 1.8,
             fontWeight: 'bold', fontSize: '1.1rem', textTransform: 'none',

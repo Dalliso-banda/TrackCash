@@ -5,6 +5,7 @@ const { overview } = require('../controllers/dashboard.controller');
 router.use('/auth', require('./auth.routes'));
 router.use('/expenses', protect, require('./expense.routes'));
 router.use('/income', protect, require('./income.routes'));
+router.use('/budgets', protect, require('./budget.routes'));
 router.use('/savings', protect, require('./savings.routes'));
 router.get('/dashboard', protect, overview);
 

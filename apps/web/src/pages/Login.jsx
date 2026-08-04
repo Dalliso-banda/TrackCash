@@ -25,7 +25,7 @@ export default function Login() {
 
       login(data.email, data.password); 
       
-      navigate('/');
+      navigate('/profile');
     } catch (err) {
       console.error("Full Axios Error Object:", err);
 

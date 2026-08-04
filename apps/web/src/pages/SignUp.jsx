@@ -4,8 +4,9 @@ import { useNavigate, Link as RouterLink } from 'react-router-dom';
 import { Box, Typography, TextField, Button, Link, Paper, Alert } from '@mui/material';
 import BrandedHeader from '../components/BrandedHeader';
 import { registerUser } from '../api/auth';
-
+import { useAuth } from '../context/AuthContext';
 export default function SignUp() {
+     const { login } = useAuth();
   const navigate = useNavigate();
   const [serverError, setServerError] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,6 +28,7 @@ export default function SignUp() {
       });
       localStorage.setItem('access_token',  res.data.data.access_token);
       localStorage.setItem('refresh_token', res.data.data.refresh_token);
+      login(data.email, data.password); 
       navigate('/');
     } catch (err) {
       setServerError(err.response?.data?.message || 'Registration failed. Please try again.');

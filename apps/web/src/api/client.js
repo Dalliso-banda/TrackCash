@@ -1,7 +1,10 @@
 import axios from 'axios';
+                 
+const rawBaseURL = import.meta.env.VITE_API_URL || 'https://artasylum.xyz/api/v1';
+const normalizedBaseURL = rawBaseURL.replace(/\/$/, '');
 
 const client = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://192.168.43.201:5000/api/v1',
+  baseURL: normalizedBaseURL,
   headers: { 'Content-Type': 'application/json' },
 });
 

@@ -1,5 +1,10 @@
 {
   "appId": "com.trackcash.app",
   "appName": "TrackCash",
-  "webDir": "../web/dist"
+  "webDir": "../web/dist",
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
 }

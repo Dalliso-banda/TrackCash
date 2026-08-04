@@ -16,6 +16,7 @@ import LogIncome from './pages/LogIncome';
 import OnBoarding from './pages/OnBoarding';
 import LogInPage from './pages/Login';
 import SignUp from './pages/SignUp';
+import Budgeting from './pages/Budgeting';
 
 export default function App() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/save" element={<ProtectedRoute><SavingsView /></ProtectedRoute>} />
             <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
             <Route path="/income" element={<ProtectedRoute><LogIncome /></ProtectedRoute>} />
+            <Route path="/budgeting" element={<ProtectedRoute><Budgeting /></ProtectedRoute>} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>
